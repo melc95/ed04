@@ -6,7 +6,7 @@ import java.util.*;
   *Clase que representa una agenda de contactos.
   */
 
-public class agendaContactos {
+public class agendaContactos implements IagendaContactos {
     private List<Persona> contacts; // Lista de Persona
 
     /**
@@ -25,6 +25,7 @@ public class agendaContactos {
       * @param phone El número de teléfono del contacto.
       */
 
+    @Override
     public void addContact(String name, String phone) {
         boolean exists = false;
         for (Persona c : contacts) {
@@ -45,6 +46,7 @@ public class agendaContactos {
      * Elimina un contacto de la agenda.
      * @param name El nombre del contacto que se va a eliminar.
      */
+    @Override
     public void removeContact(String name) {
         Iterator<Persona> it = contacts.iterator();
 
@@ -62,6 +64,7 @@ public class agendaContactos {
      * @param oldPhone El número de teléfono antiguo.
      * @param newPhone El número de teléfono nuevo.
      */
+    @Override
     public void modifyPhoneNumber(String name, String oldPhone, String newPhone) {
         for (Persona c : contacts) {
             if (c.getName().equalsIgnoreCase(name)) {
@@ -80,6 +83,7 @@ public class agendaContactos {
      * Obtiene la lista de contactos de la agenda.
      * @return La lista de contactos.
      */
+    @Override
     public List<Persona> getContacts() {
         return this.contacts;
     }

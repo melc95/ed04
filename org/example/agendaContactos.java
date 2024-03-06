@@ -6,15 +6,15 @@ import java.util.*;
   *Clase que representa una agenda de contactos.
   */
 
-public class Agenda {
+public class agendaContactos {
     private List<Contacto> contacts; // Lista de Contacto
 
     /**
-     * Constructor de la clase Agenda .
+     * Constructor de la clase agendaContactos .
      * Inicializa la lista de contactos como una lista vacía .
      */
 
-    public Agenda() {
+    public agendaContactos() {
         this.contacts = new ArrayList<>();
     }
 

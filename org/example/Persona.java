@@ -7,16 +7,16 @@ import java.util.List;
  * Clase que representa un contacto en una agenda.
  */
 
-class Contacto {
+class Persona {
     private String name;
     private List<String> phones;
 
     /**
-     * Constructor de la clase Contacto
+     * Constructor de la clase Persona
      * @param name El nombre del contacto.
      * @param phone El número de teléfono del contacto
      */
-    public Contacto(String name, String phone) {
+    public Persona(String name, String phone) {
         this.setName(name);
         this.setPhones(new ArrayList<>());
         this.getPhones().add(phone);
